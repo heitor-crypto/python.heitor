@@ -1,0 +1,31 @@
+# tipos de dados primitivos:
+# - inteiro (int): números inteiros
+# - float: números reais, decimais
+# - string (str): cadeia de caracteres, utilizando aspas
+# - boolean (bool): tipo lógico true ou false
+# - complex (complex): números complexos, com parte real e imaginária
+# - list (list): lista de elementos, ordenados e indexados
+# - tuple (tuple): tupla de elementos, ordenados e imutáveis
+# - dictionary (dict): dicionário de elementos, não ordenados e indexados
+
+# atribuição de variável por captura
+nome = input("Digite seu nome: ")
+print("olá", nome)
+idade = input("Digite sua idade: ")
+print(idade)
+altura = input("Digite sua altura: ")
+print(type(altura))
+
+# exibir na tela
+print(f"nome: {nome} idade: {idade} altura: {altura}")
+
+# exemplo de conversão de string para inteiro
+valorA = int(input("Digite o valor de A: "))
+valorB = int(input("Digite o valor de B: "))
+resultado = valorA + valorB
+print(f"a soma = {resultado}")
+# exemplo de conversão de string para float
+valorA = float(input("Digite o valor de A: "))
+valorB = float(input("Digite o valor de B: "))
+resultado = valorA + valorB
+print(f"a soma = {resultado}")
