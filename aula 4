@@ -1,0 +1,24 @@
+# operadores aritméticos
+valorA = float(input("Digite o valor de A: "))
+valorB = float(input("Digite o valor de B: "))
+# soma
+soma = valorA + valorB
+print(f"A soma = {soma}")
+# subtração
+subtracao = valorA - valorB
+print(f"A subtração = {subtracao}")
+# multiplicação
+multiplicacao = valorA * valorB
+print(f"A multiplicação = {multiplicacao}")
+# divisão
+divisao = valorA / valorB
+print(f"A divisão de = {divisao}")
+# divisão inteira
+divisao_inteira = valorA // valorB
+print(f"A divisão inteira de = {divisao_inteira}")
+# resto de divisão
+resto_divisao = valorA % valorB
+print(f"O resto da divisão de = {resto_divisao}")
+#exponenciação
+exponenciacao = valorA ** valorB
+print(f"A exponenciação de = {exponenciacao}")
