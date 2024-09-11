@@ -1,0 +1,13 @@
+# algoritmo média: criar um algoritmo que leia 4 notas
+# e apresente uma média final
+
+print("Algoritmo do calculo da média")
+nota1 = float(input("Digite a nota1: "))
+nota2 = float(input("Digite a nota2: "))
+nota3 = float(input("Digite a nota3: "))
+nota4 = float(input("Digite a nota4: "))
+media = (nota1 + nota2 + nota3 + nota4) / 4
+print("A média é: ", media)  # print da média
+# algoritmo média: criar um algoritmo que leia 4 notas
+# e apresente uma média final
+# Algoritmo do calculo da média
