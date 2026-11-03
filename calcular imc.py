@@ -1,13 +1,35 @@
-print("calcular o peso")
-peso = float(input("digite o seu peso: "))
-altura = float(input("digite a sua altura: "))
-imc = peso / (altura ** 2)
-print("seu imc é {:.2f}".format(imc))
-if peso < 18.5 :
-    print("abaixo do peso")
-elif peso <= 18.5 < 24.9 :
-    print("peso normal")
-elif peso <= 25 < 34.9 :    
-    print("sobrepeso")
-else:
-    print("acima do peso")
+
+print("===== CALCULADORA DE IMC =====")
+
+try:
+    peso = float(input("Digite seu peso em kg: "))
+    altura = float(input("Digite sua altura em metros: "))
+
+    if peso <= 0 or altura <= 0:
+        print("Erro: peso e altura devem ser maiores que zero.")
+
+    else:
+        imc = peso / (altura ** 2)
+
+        print(f"\nSeu IMC é: {imc:.2f}")
+
+        if imc < 18.5:
+            print("Classificação: Abaixo do peso")
+
+        elif imc < 25:
+            print("Classificação: Peso normal")
+
+        elif imc < 30:
+            print("Classificação: Sobrepeso")
+
+        elif imc < 35:
+            print("Classificação: Obesidade grau I")
+
+        elif imc < 40:
+            print("Classificação: Obesidade grau II")
+
+        else:
+            print("Classificação: Obesidade grau III")
+
+except ValueError:
+    print("Erro: digite valores numéricos válidos.")
