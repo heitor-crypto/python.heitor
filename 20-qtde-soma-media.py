@@ -1,19 +1,31 @@
+
 soma = 0
 contador = 0
 
+print("===== SOMA E MÉDIA DE NÚMEROS =====")
+print("Digite 0 para encerrar o programa.\n")
+
 while True:
-    numero = int(input ("digite um numero para (0 para sair): "))
-    if numero == 0:
-        break
-    
-    soma += numero
-    contador += 1
+    try:
+        numero = int(input("Digite um número inteiro: "))
+
+        if numero == 0:
+            break
+
+        soma += numero
+        contador += 1
+
+    except ValueError:
+        print("Erro: digite um número inteiro válido.")
+
+print("\n===== RESULTADOS =====")
 
 if contador > 0:
-        media = soma / contador
+    media = soma / contador
 
-        print(f"quantidade de numeros digitador: {contador}")
-        print(f"soma dos numeros digitados: {soma}")
-        print(f"media aritimetica: {media}")
+    print(f"Quantidade de números digitados: {contador}")
+    print(f"Soma dos números digitados: {soma}")
+    print(f"Média aritmética: {media:.2f}")
+
 else:
-        print("nenhum numero foi digitado.")
+    print("Nenhum número foi digitado.")
