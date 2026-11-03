@@ -1,14 +1,34 @@
-a = float(input('Entre com o valor de a: '))
-b = float(input('Entre com o valor de b: '))
-c = float(input('Entre com o valor de c: '))
 
-delta = (b ** 2) - 4 * a * c
-if a == 0:
-    print("O valor de a, deve ser diferente de 0")
-elif delta < 0:
-    print("Sem raízes reais")
-else:
-    x1 = (-b + delta ** (1 / 2)) / (2 * a)
-    x2 = (-b - delta ** (1 / 2)) / (2 * a)
+import math
 
-    print("x1: {}, x2: {}".format(x1, x2))
+print("===== EQUAÇÃO DO 2º GRAU =====")
+
+try:
+    a = float(input("Digite o valor de a: "))
+    b = float(input("Digite o valor de b: "))
+    c = float(input("Digite o valor de c: "))
+
+    if a == 0:
+        print("Erro: o valor de a deve ser diferente de zero.")
+
+    else:
+        delta = b ** 2 - 4 * a * c
+
+        print(f"\nValor de delta: {delta}")
+
+        if delta < 0:
+            print("A equação não possui raízes reais.")
+
+        elif delta == 0:
+            x = -b / (2 * a)
+            print(f"A equação possui uma raiz real dupla: {x:.2f}")
+
+        else:
+            x1 = (-b + math.sqrt(delta)) / (2 * a)
+            x2 = (-b - math.sqrt(delta)) / (2 * a)
+
+            print(f"Primeira raiz (x1): {x1:.2f}")
+            print(f"Segunda raiz (x2): {x2:.2f}")
+
+except ValueError:
+    print("Erro: digite apenas números válidos.")
