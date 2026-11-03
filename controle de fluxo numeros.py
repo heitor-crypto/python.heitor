@@ -1,14 +1,18 @@
+
+print("===== CONTROLE DE FLUXO =====")
+
 contador = 0
 
-while contador <= 100:
-    contador +=1
+while contador < 40:
+    contador += 1
 
-    if (contador == 6):
-        print("não vou mostrar o 6")
-        continue       
-    if (contador >= 10 and contador <= 27):
-        print ("não vou mostrar ")
+    if contador == 6:
+        print("Número 6 ignorado.")
         continue
+
+    if 10 <= contador <= 27:
+        continue
+
     print(contador)
-    if contador == 40:
-        break
+
+print("\nPrograma encerrado ao chegar ao número 40.")
