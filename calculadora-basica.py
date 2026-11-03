@@ -1,57 +1,53 @@
+
 while True:
-    print("## caluculadora ##\n")
+    print("\n===== CALCULADORA =====")
     print("1. Soma")
     print("2. Subtração")
     print("3. Multiplicação")
     print("4. Divisão")
-    print("5. resto da divisão")
-    print("6. sair")
-    escolha = input("Digite uma escolha: ")
+    print("5. Resto da divisão")
+    print("6. Sair")
+
+    escolha = input("\nDigite uma opção: ")
+
+    if escolha == "6":
+        print("Calculadora encerrada.")
+        break
+
+    if escolha not in ["1", "2", "3", "4", "5"]:
+        print("Opção inválida. Tente novamente.")
+        continue
+
+    try:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+
+    except ValueError:
+        print("Erro: digite apenas números válidos.")
+        continue
 
     if escolha == "1":
-        print("1. Soma")
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
         resultado = num1 + num2
-        print("a soma dos valores:", resultado,"\n")
+        print(f"Resultado da soma: {resultado}")
 
     elif escolha == "2":
-        print("2. Subtração")
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
         resultado = num1 - num2
-        print("a subtração dos valores:", resultado)
+        print(f"Resultado da subtração: {resultado}")
 
     elif escolha == "3":
-        print("3. Multiplicação")
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
         resultado = num1 * num2
-        print("a multiplicação dos valores:", resultado)
+        print(f"Resultado da multiplicação: {resultado}")
 
     elif escolha == "4":
-        print("4. Divisão")
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-        if num2 !=0:
+        if num2 != 0:
             resultado = num1 / num2
-            print("a divisão dos valores:", resultado)
+            print(f"Resultado da divisão: {resultado}")
         else:
-            print("erro: divisão por zero. ")
+            print("Erro: não é possível dividir por zero.")
 
     elif escolha == "5":
-        print("5. resto da divisão")
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
-        if num2 !=0:
+        if num2 != 0:
             resultado = num1 % num2
-            print("resto da divisão dos valores:", resultado)
+            print(f"Resto da divisão: {resultado}")
         else:
-            print("erro: divisão por zero. ")
-
-    elif escolha == "6":
-        print("6. sair")
-        print("sair")
-        break
-    else:
-        print("erro: escolha invalida. ")
+            print("Erro: não é possível dividir por zero.")
